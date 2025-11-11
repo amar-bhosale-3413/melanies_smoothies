@@ -1,7 +1,7 @@
 # Import python packages
 import streamlit as st
-import requests
 import pandas as pd_df
+import requests
 #from snowflake.snowpark.context import get_active_session
 from snowflake.snowpark.functions import col
 
@@ -30,9 +30,6 @@ ingredients_list = st.multiselect('Choose up to 5 ingredients:'
                                   ,my_dataframe
                                  ,max_selections=5)
 if ingredients_list:
-    #st.write(ingredients_list)
-    #st.text(ingredients_list)
-
     ingredients_string=''
     for fruit_chosen in ingredients_list:
       ingredients_string += fruit_chosen + ' '
